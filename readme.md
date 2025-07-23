@@ -6,7 +6,7 @@ MamaShule is a comprehensive MERN-based School Management System designed to str
 ---
 ## 🚀 Live Links
 
-- 🌐 [Frontend Live](https://mamashule-frontend.vercel.app)
+- 🌐 [Frontend Live](https://mamashule-peach.vercel.app/)
 - 🧠 [Backend API (Hosted)](https://mamashule-backend.onrender.com)
 
 ---
