@@ -9,11 +9,10 @@ const app = express();
 const server = http.createServer(app);
 
 // Middleware
+const allowedOrigins = [process.env.CLIENT_URL, "http://localhost:5173"];
+
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://mamashule-peach.vercel.app"
-  ],
+  origin: allowedOrigins,
   credentials: true
 }));
 
@@ -72,10 +71,7 @@ app.use('/api/users', userRoutes);
 // Initialize Socket.io with CORS support
 const io = socketIo(server, {
   cors: {
-    origin: [
-      "http://localhost:5173",
-      "https://mamashule-peach.vercel.app"
-    ],
+    origin: allowedOrigins,
     methods: ["GET", "POST"],
     credentials: true
   }
