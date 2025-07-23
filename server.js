@@ -16,6 +16,12 @@ app.use(cors({
   credentials: true
 }));
 
+app.options('*', cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
+console.log("Allowed origins:", allowedOrigins);
+
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("✅ MongoDB connected"))
