@@ -33,7 +33,7 @@ MamaShule is a comprehensive MERN-based School Management System designed to str
 #### 💸 Monetizable Features:
 - Mpesa & Stripe Integration – with digital receipts
 - Analytics Dashboard – insights into performance, fee balance
-- Push Notifications (SMS/Email)
+- Push Notifications (SMS(Africa's Talking) /Email(NodeMailer))
 - Subscription-based analytics for parents
 
 ---
@@ -44,6 +44,7 @@ MamaShule is a comprehensive MERN-based School Management System designed to str
 - View assigned classes and students
 - Mark attendance daily per class
 - Upload student results (term/subject)
+- Add, edit, and view student results
 - Assign homework, notes, monitor submissions
 - Chat with assigned parents (real-time planned)
 - Notify admin of class-related issues
@@ -59,6 +60,7 @@ MamaShule is a comprehensive MERN-based School Management System designed to str
 ### ✅ 3. Parent Dashboard
 
 #### 🔹 Core Features:
+- Read-only privileges – cannot edit or post
 - View child’s profile, class, assigned teacher
 - See results per term and subject
 - Attendance tracking
@@ -79,6 +81,11 @@ MamaShule is a comprehensive MERN-based School Management System designed to str
 - Secure JWT auth
 - Protected Routes per role
 - Login persistence (localStorage & Redux)
+- Access Permissions:
+     - Admin: Full access to all actions and data
+     - Teacher: Can add, edit, and view student records
+     - Parent: View-only access to assigned data
+
 
 ---
 ## 📈 Monetization Strategy
@@ -88,7 +95,7 @@ MamaShule is a comprehensive MERN-based School Management System designed to str
 | Premium Analytics            | Admin, Parent    | Subscription Monthly/Yearly       |
 | Messaging System             | Parents, Teachers| Free Tier + Paid Full Access       |
 | PDF Report Cards             | Parent           | Paid per term/year                |
-| SMS Notifications            | Parent           | Pay per SMS bundle                |
+| SMS Notifications (Africa's Talking)           | Parent           | Pay per SMS bundle                |
 | Homework Uploads             | Teacher          | Basic Limit, Premium Unlimited    |
 | Parent App Access (PWA)      | Parent           | Basic Free, Full Premium          |
 
@@ -133,6 +140,11 @@ npm install
 PORT=8000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
+
+# Africa's Talking Integration
+AFRICASTALKING_USERNAME=sandbox
+AFRICASTALKING_API_KEY=your_api_key
+
 ```
 
 Then run the backend:
@@ -212,12 +224,12 @@ VITE_API_URL=https://mamashule-backend.onrender.com
 ## 🧪 Tech Stack
 
 > *Project Stack*: MongoDB | Express.js | React.js (with TypeScript) | Node.js  
-> *Frontend Styling*: CSS Modules | Tailwind CSS  
+> *Frontend Styling*:  Tailwind CSS  
 > *State Management*: Redux Toolkit  
 > *Authentication*: Role-Based Auth (JWT)  
 > *Payments*: Mpesa (STK Push) & Stripe Integration  
 > *Real-Time Chat*: Socket.io 
-
+> *SMS Integration: Africa's Talking
 
 ## 👩🏾‍💻 Author
 
