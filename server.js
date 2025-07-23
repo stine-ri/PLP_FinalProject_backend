@@ -9,7 +9,8 @@ const app = express();
 const server = http.createServer(app);
 
 // Middleware
-const allowedOrigins = [process.env.CLIENT_URL, "http://localhost:5173"];
+const allowedOrigins = ["https://mamashule-peach.vercel.app", "http://localhost:5173"];
+
 
 // Middleware
 app.use(cors({
