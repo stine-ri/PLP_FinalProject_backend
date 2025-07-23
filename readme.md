@@ -7,13 +7,13 @@ MamaShule is a comprehensive MERN-based School Management System designed to str
 ## 🚀 Live Links
 
 - 🌐 [Frontend Live](https://mamashule-peach.vercel.app/)
-- 🧠 [Backend API (Hosted)](https://mamashule-backend.onrender.com)
+- 🧠 [Backend API (Hosted)](https://mama-shule.onrender.com)
 
 ---
 ## 📦 Repositories
 
-- 💻 *Frontend GitHub*: [https://github.com/stine-ri/mamashule-frontend](https://github.com/stine-ri/mamashule-frontend)
-- 🔧 *Backend GitHub*: [https://github.com/stine-ri/mamashule-backend](https://github.com/stine-ri/mamashule-backend)
+- 💻 *Frontend GitHub*: [https://github.com/stine-ri/PLP_FinalProject_frontend.git](https://github.com/stine-ri/PLP_FinalProject_frontend.git)
+- 🔧 *Backend GitHub*: [https://github.com/stine-ri/PLP_FinalProject_backend.git](https://github.com/stine-ri/PLP_FinalProject_backend.git)
 
 ---
 

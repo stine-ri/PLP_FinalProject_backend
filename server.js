@@ -10,10 +10,12 @@ const server = http.createServer(app);
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || "http://localhost:5173",
+  origin: [
+    "http://localhost:5173",
+    "https://mamashule-peach.vercel.app"
+  ],
   credentials: true
 }));
-app.use(express.json());
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
@@ -70,12 +72,14 @@ app.use('/api/users', userRoutes);
 // Initialize Socket.io with CORS support
 const io = socketIo(server, {
   cors: {
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://mamashule-peach.vercel.app"
+    ],
     methods: ["GET", "POST"],
     credentials: true
   }
 });
-
 
 chatSocket(io);  
 
