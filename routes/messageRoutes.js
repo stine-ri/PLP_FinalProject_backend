@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const { getMessages, sendMessage } = require('../controllers/messageController');
+const { verifyToken , requireRole} = require('../middleware/auth');
+const chatController = require('../controllers/chatController');
+router.get('/:receiverId', verifyToken, getMessages);
+router.get('/parent/:teacherId', verifyToken, requireRole('parent'), getMessages);
+router.post('/', verifyToken, sendMessage);
+router.post('/start', chatController.startConversation);
+module.exports = router;
