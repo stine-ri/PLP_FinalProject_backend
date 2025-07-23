@@ -11,16 +11,17 @@ const server = http.createServer(app);
 // Middleware
 const allowedOrigins = [process.env.CLIENT_URL, "http://localhost:5173"];
 
+// Middleware
 app.use(cors({
   origin: allowedOrigins,
   credentials: true
 }));
+app.options('*', cors({ origin: allowedOrigins, credentials: true })); // <-- Add this
+app.use(express.json()); // <-- Ensure this is present
+app.use(express.urlencoded({ extended: true }));
 
-app.options('*', cors({
-  origin: allowedOrigins,
-  credentials: true,
-}));
-console.log("Allowed origins:", allowedOrigins);
+console.log("Allowed origins:", allowedOrigins); // Debug origin values
+
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
