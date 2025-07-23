@@ -10,7 +10,7 @@ const {
   getAllStudents,
   bulkImportStudents,
   getStudentById
-} = require("../controllers/studentController");
+} = require("../controllers/studentcontroller");
 const { verifyToken } = require("../middleware/auth");
 
 // Rate limiting configuration
